@@ -55,7 +55,12 @@ async function loadPlaylist() {
       const proxies = [
         `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
         `https://corsproxy.io/?${encodeURIComponent(url)}`,
-        `https://cors-anywhere.herokuapp.com/${url}`
+        `https://cors-anywhere.herokuapp.com/${url}`,
+        `https://secure-272717.vercel.app/${url}`,
+        `https://secure-272717.tatnet.app/${url}`,
+        `https://secure-272717.vercel.app/${url}`,
+        `https://proxyvideo.vercel.app/${url}`,
+        `https://secure-ridge-22999-537c838d4a8a.herokuapp.com/`
       ];
       let success = false;
       for (const proxy of proxies) {
@@ -78,7 +83,7 @@ async function loadPlaylist() {
 }
 
 function loadZabawa() {
-  const zabawa = 'https://raw.githubusercontent.com/CrocoUser/zabava-project/main/playlist.m3u';
+  const zabawa = 'https://raw.githubusercontent.com/CrocoUser/zabava-project/refs/heads/main/zabava-full.m3u';
   document.getElementById('m3uUrl').value = zabawa;
   loadPlaylist();
 }
